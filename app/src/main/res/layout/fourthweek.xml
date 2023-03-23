@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainLayout"
     android:background="#abfbfa"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -10,7 +11,7 @@
         android:id="@+id/UnderBtn"
         android:layout_width="300dp"
         android:layout_height="100dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#afaffa"
         android:text="Click Button!"
         android:textSize="30sp"
@@ -23,7 +24,7 @@
         android:id="@+id/RightBtn"
         android:layout_width="120dp"
         android:layout_height="50dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="52dp"
         android:backgroundTint="#faafaf"
         android:onClick="onRightBtnClick"
@@ -53,7 +54,7 @@
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#faafaf"
         android:onClick="onLeftBtnClick"
         android:text="Button1"
@@ -99,5 +100,32 @@
         app:layout_constraintHorizontal_bias="0.17"
         app:layout_constraintStart_toEndOf="@+id/EditTxt"
         app:layout_constraintTop_toBottomOf="@+id/UnderTxtV" />
+
+    <Button
+        android:id="@+id/FinalBtn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#fafacc"
+        android:text="Change background Color!"
+        android:textColor="#afaffa"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditTxt" />
+
+    <TextView
+        android:id="@+id/FinalText"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="#affaaf"
+        android:paddingVertical="10dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.417"
+        app:layout_constraintStart_toEndOf="@+id/FinalBtn"
+        app:layout_constraintTop_toBottomOf="@+id/SubmitBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

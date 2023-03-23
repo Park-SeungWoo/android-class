@@ -1,6 +1,7 @@
 package com.deep.park;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Random;
+
 // 외부 클래스
 public class MainActivity extends AppCompatActivity {
 
@@ -19,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
     // 익명 클래스
     // 이 두개로 이벤트 처리 가능
 
-    TextView titletxt, txtv;
+    TextView titletxt, txtv, finaltxt;
     EditText editt;
-    Button leftbtn, rightbtn, underbtn, submitbtn;
+    Button leftbtn, rightbtn, underbtn, submitbtn, finalbtn;
     Boolean tog = false;
 
     @Override
@@ -71,6 +74,23 @@ in fourthweek.xml
             @Override
             public void onClick(View view) {
                 titletxt.setText(editt.getText().toString());
+            }
+        });
+
+        // final overview
+        finaltxt = (TextView) findViewById(R.id.FinalText);
+        finalbtn = (Button) findViewById(R.id.FinalBtn);
+        finalbtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Random rand = new Random();
+                int r = rand.nextInt(256);
+                int g = rand.nextInt(256);
+                int b = rand.nextInt(256);
+                String color = String.format("#%02x%02x%02x", r, g, b);
+                finaltxt.setBackgroundColor(Color.parseColor(color));
+                finaltxt.setText(String.format("(%d, %d, %d)", r, g, b));
+
             }
         });
     }
