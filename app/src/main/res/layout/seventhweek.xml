@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/titleTxt"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:text="섭씨 또는 화씨를 입력하시오"
+        android:textSize="30sp"
+        android:fontFamily="@font/bazzi"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/temperatureEdit"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:hint="temperature"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTxt"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioGrp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureEdit"
+        >
+
+        <RadioButton
+            android:id="@+id/celsiusRdo"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:textSize="20sp"
+            android:fontFamily="@font/bazzi"
+            android:text="섭씨(C)"
+            />
+
+        <RadioButton
+            android:id="@+id/fahRdo"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:textSize="20sp"
+            android:fontFamily="@font/bazzi"
+            android:text="화씨(F)"
+            />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/conversionBtn"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#c1c1c1"
+        android:fontFamily="@font/bazzi"
+        android:text="변환"
+        android:textSize="30sp"
+        android:onClick="convertTemper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/radioGrp"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureEdit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

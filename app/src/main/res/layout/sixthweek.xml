@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/coffee_back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/titleTxt"
+        android:layout_width="390dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffafaf"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:text="Introduction of coffees"
+        android:textSize="20sp"
+        android:textColor="#f1f1f1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/innerLayout1"
+        android:layout_width="390dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:background="#affaaf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTxt" >
+
+        <Button
+            android:id="@+id/coffee1"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:text="americano\n(700￦)"
+            android:textSize="10sp"
+            android:backgroundTint="#afaffa"
+            android:onClick="coffeeBtnEventListener"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/coffee2"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:text="Cafe Latte\n(1000￦)"
+            android:textSize="10sp"
+            android:backgroundTint="#afaffa"
+            android:onClick="coffeeBtnEventListener"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/coffee1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/coffee3"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:text="cappuccino\n(1500￦)"
+            android:textSize="10sp"
+            android:backgroundTint="#afaffa"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:onClick="coffeeBtnEventListener"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/coffee2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/coffeeImg"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/coffeemain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/innerLayout1" />
+
+    <TextView
+        android:id="@+id/descTxt"
+        android:layout_width="390dp"
+        android:layout_height="150dp"
+        android:text="Select Coffee Menu!"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:scrollbars="vertical"
+        android:textSize="20sp"
+        android:background="#dfdfdf"
+        android:fontFamily="sans-serif-condensed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/coffeeImg"
+        />
+
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="195dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#cfaefc"
+        android:onClick="coffeeBtnEventListener"
+        android:text="Reset"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descTxt" />
+
+    <TextView
+        android:id="@+id/totPriceTxt"
+        android:layout_width="190dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:background="#bfbfbf"
+        android:gravity="center"
+        android:text="0￦"
+        android:textColor="#f1f1f1"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toEndOf="@+id/resetBtn"
+        app:layout_constraintTop_toBottomOf="@+id/descTxt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
